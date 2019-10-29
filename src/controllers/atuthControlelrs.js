@@ -64,7 +64,7 @@ router.post('/createTasks', async (req, res) => {
 
 //get Tasks
 router.get('/showTasks', async (req, res) => {
-    const { id_user } = req.header;
+    const { id_user } = req.headers;
 
 
     const tasks = await Tasks.find({ id_user });
